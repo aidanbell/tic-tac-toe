@@ -1,0 +1,14 @@
+checkWinner()
+  -checks 8 possible outcomes
+  -query selector all for tds
+  -loop and create variable for innerhtml (x, o, "")
+
+
+
+
+
+
+AutoPlay Bot(s)
+-Win Bot
+  -need to figure out logic for win Bot
+-Petty Bot
