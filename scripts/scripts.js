@@ -1,4 +1,5 @@
-let turn = 0
+let turn = 0;
+let pick;
 
 let squares = document.querySelectorAll('td');
 squares.forEach(function(square) {
@@ -10,5 +11,10 @@ squares.forEach(function(square) {
       this.innerHTML = "O";
     }
     turn++;
+    checkWinner();
   })
 });
+
+function checkWinner() {
+
+}

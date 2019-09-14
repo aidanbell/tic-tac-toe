@@ -1,9 +1,22 @@
 checkWinner()
   -checks 8 possible outcomes
-  -query selector all for tds
-  -loop and create variable for innerhtml (x, o, "")
+    -checks if 3 x's/o's on horizontal
+    -checks if 3 x's/o's on vertical
+    -checks if 3 x's/o's on either diagonal
+  -How can I do that?
+    -create array of ids of tds
+      -iterate through array in groups of 3 for horizontal
+      -iterate through array according to second digit for vertical
+      -iterate through selected squares for diagonal
+    -manually check through ids by hardcoding them in
+    
 
 
+   00 | 01 | 02
+   ---+----+---
+   10 | 11 | 12
+   ---+----+---
+   20 | 21 | 22
 
 
 
