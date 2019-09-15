@@ -79,28 +79,28 @@ function checkWinnerDL() {
       winner = "X";
       return;
     } else if (result === 'OOO') {
-      winner = "O"
+      winner = "O";
       return;
-    } else {
-      y++;
     }
+    y++;
   }
 }
 
 function checkWinnerDR() {
   let x = 0;
-  for (y = 2; y > 0; y--) {
+  let result = "";
+  for (y = 2; y >= 0; y--) {
     let i = 's' + y + '-' + x;
     result += document.getElementById(i).innerHTML;
+    console.log(result);
     if (result === 'XXX') {
       winner = "X";
       return;
     } else if (result === 'OOO') {
-      winner = "O"
+      winner = "O";
       return;
-    } else {
-      x++;
     }
+    x++;
   }
 }
 
