@@ -1,9 +1,29 @@
 body {
   text-align: center;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rubik'
+}
+
+h1 {
+  font-size: 70px;
+  text-decoration: overline underline;
+}
+
+p {
+  font-size: 30px;
 }
 
 td {
   border: 1px solid black;
-  width: 10vmin;
-  height: 10vmin;
+  width: 18vmin;
+  height: 18vmin;
+  font-size: 100px;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

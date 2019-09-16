@@ -1,7 +1,5 @@
 let turn = 0;
-let pick;
 let winner = "";
-let squareArray = [];
 let result = "";
 
 init();
@@ -9,7 +7,6 @@ init();
 function init() {
   let squares = document.querySelectorAll('td');
   squares.forEach(function(square) {
-    squareArray.push(square.id);
     square.addEventListener('click', function(evt){
       if (this.innerHTML !== "" || winner !== "") return;
       if (turn % 2 === 0) {
@@ -18,6 +15,11 @@ function init() {
         this.innerHTML = "O";
       }
       turn++;
+      if (turn % 2 == 0) {
+        document.getElementById('msg').innerHTML = "X's turn."
+      } else {
+        document.getElementById('msg').innerHTML = "O's turn."
+      }
       checkWinner();
     })
   });
@@ -92,7 +94,6 @@ function checkWinnerDR() {
   for (y = 2; y >= 0; y--) {
     let i = 's' + y + '-' + x;
     result += document.getElementById(i).innerHTML;
-    console.log(result);
     if (result === 'XXX') {
       winner = "X";
       return;
@@ -103,5 +104,3 @@ function checkWinnerDR() {
     x++;
   }
 }
-
-console.log(squareArray);
